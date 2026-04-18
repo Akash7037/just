@@ -1,0 +1,174 @@
+
+> cricket-auction-picker@1.0.0 build D:\cricket-auction-picker
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+X [ERROR] The symbol "PROJECT_ROOT" has already been declared
+
+    vite.config.ts:162:6:
+      162 │ const PROJECT_ROOT = import.meta.dirname;
+          ╵       ~~~~~~~~~~~~
+
+  The symbol "PROJECT_ROOT" was originally declared here:
+
+    vite.config.ts:13:6:
+      13 │ const PROJECT_ROOT = import.meta.dirname;
+         ╵       ~~~~~~~~~~~~
+
+X [ERROR] The symbol "LOG_DIR" has already been declared
+
+    vite.config.ts:163:6:
+      163 │ const LOG_DIR = path.join(PROJECT_ROOT, ".manus-logs");
+          ╵       ~~~~~~~
+
+  The symbol "LOG_DIR" was originally declared here:
+
+    vite.config.ts:14:6:
+      14 │ const LOG_DIR = path.join(PROJECT_ROOT, ".manus-logs");
+         ╵       ~~~~~~~
+
+X [ERROR] The symbol "MAX_LOG_SIZE_BYTES" has already been declared
+
+    vite.config.ts:164:6:
+      164 │ const MAX_LOG_SIZE_BYTES = 1 * 1024 * 1024; // 1MB per log file
+          ╵       ~~~~~~~~~~~~~~~~~~
+
+  The symbol "MAX_LOG_SIZE_BYTES" was originally declared here:
+
+    vite.config.ts:15:6:
+      15 │ const MAX_LOG_SIZE_BYTES = 1 * 1024 * 1024;
+         ╵       ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] The symbol "TRIM_TARGET_BYTES" has already been declared
+
+    vite.config.ts:165:6:
+      165 │ const TRIM_TARGET_BYTES = Math.floor(MAX_LOG_SIZE_BYTES * 0.6); /...
+          ╵       ~~~~~~~~~~~~~~~~~
+
+  The symbol "TRIM_TARGET_BYTES" was originally declared here:
+
+    vite.config.ts:16:6:
+      16 │ const TRIM_TARGET_BYTES = Math.floor(MAX_LOG_SIZE_BYTES * 0.6);
+         ╵       ~~~~~~~~~~~~~~~~~
+
+X [ERROR] The symbol "ensureLogDir" has already been declared
+
+    vite.config.ts:169:9:
+      169 │ function ensureLogDir() {
+          ╵          ~~~~~~~~~~~~
+
+  The symbol "ensureLogDir" was originally declared here:
+
+    vite.config.ts:20:9:
+      20 │ function ensureLogDir() {
+         ╵          ~~~~~~~~~~~~
+
+  Duplicate top-level function declarations are not allowed in an ECMAScript module. This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    vite.config.ts:356:0:
+      356 │ export default defineConfig({
+          ╵ ~~~~~~
+
+X [ERROR] The symbol "trimLogFile" has already been declared
+
+    vite.config.ts:175:9:
+      175 │ function trimLogFile(logPath: string, maxSize: number) {
+          ╵          ~~~~~~~~~~~
+
+  The symbol "trimLogFile" was originally declared here:
+
+    vite.config.ts:26:9:
+      26 │ function trimLogFile(logPath: string, maxSize: number) {
+         ╵          ~~~~~~~~~~~
+
+  Duplicate top-level function declarations are not allowed in an ECMAScript module. This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    vite.config.ts:356:0:
+      356 │ export default defineConfig({
+          ╵ ~~~~~~
+
+X [ERROR] The symbol "writeToLogFile" has already been declared
+
+    vite.config.ts:200:9:
+      200 │ function writeToLogFile(source: LogSource, entries: unknown[]) {
+          ╵          ~~~~~~~~~~~~~~
+
+  The symbol "writeToLogFile" was originally declared here:
+
+    vite.config.ts:43:9:
+      43 │ function writeToLogFile(source: LogSource, entries: unknown[]) {
+         ╵          ~~~~~~~~~~~~~~
+
+  Duplicate top-level function declarations are not allowed in an ECMAScript module. This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    vite.config.ts:356:0:
+      356 │ export default defineConfig({
+          ╵ ~~~~~~
+
+X [ERROR] The symbol "vitePluginManusDebugCollector" has already been declared
+
+    vite.config.ts:225:9:
+      225 │ function vitePluginManusDebugCollector(): Plugin {
+          ╵          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  The symbol "vitePluginManusDebugCollector" was originally declared here:
+
+    vite.config.ts:55:9:
+      55 │ function vitePluginManusDebugCollector(): Plugin {
+         ╵          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Duplicate top-level function declarations are not allowed in an ECMAScript module. This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    vite.config.ts:356:0:
+      356 │ export default defineConfig({
+          ╵ ~~~~~~
+
+X [ERROR] The symbol "vitePluginStorageProxy" has already been declared
+
+    vite.config.ts:301:9:
+      301 │ function vitePluginStorageProxy(): Plugin {
+          ╵          ~~~~~~~~~~~~~~~~~~~~~~
+
+  The symbol "vitePluginStorageProxy" was originally declared here:
+
+    vite.config.ts:97:9:
+      97 │ function vitePluginStorageProxy(): Plugin {
+         ╵          ~~~~~~~~~~~~~~~~~~~~~~
+
+  Duplicate top-level function declarations are not allowed in an ECMAScript module. This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    vite.config.ts:356:0:
+      356 │ export default defineConfig({
+          ╵ ~~~~~~
+
+X [ERROR] Multiple exports with the same name "default"
+
+    vite.config.ts:356:7:
+      356 │ export default defineConfig({
+          ╵        ~~~~~~~
+
+  The name "default" was originally exported here:
+
+    vite.config.ts:125:7:
+      125 │ export default defineConfig({
+          ╵        ~~~~~~~
+
+[31mfailed to load config from D:\cricket-auction-picker\vite.config.ts[39m
+[31merror during build:
+Error: Build failed with 10 errors:
+vite.config.ts:162:6: ERROR: The symbol "PROJECT_ROOT" has already been declared
+vite.config.ts:163:6: ERROR: The symbol "LOG_DIR" has already been declared
+vite.config.ts:164:6: ERROR: The symbol "MAX_LOG_SIZE_BYTES" has already been declared
+vite.config.ts:165:6: ERROR: The symbol "TRIM_TARGET_BYTES" has already been declared
+vite.config.ts:169:9: ERROR: The symbol "ensureLogDir" has already been declared
+...
+    at failureErrorWithLog (D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:1467:15)
+    at D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:924:7)
+    at D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (D:\cricket-auction-picker\node_modules\.pnpm\esbuild@0.25.10\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:563:12)[39m
+ ELIFECYCLE  Command failed with exit code 1.
