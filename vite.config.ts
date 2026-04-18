@@ -7,7 +7,7 @@ import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 // =============================================================================
-// Manus Debug Collector - Vite Plugin
+// Manus Debug Collector - Vite Plugin jojojoj
 // Writes browser logs directly to files, trimmed when exceeding size limit
 // =============================================================================
 
